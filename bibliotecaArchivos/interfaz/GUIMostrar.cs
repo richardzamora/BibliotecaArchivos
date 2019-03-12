@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace bibliotecaArchivos
+namespace bibliotecaArchivos.interfaz
 {
-    public partial class Form1 : Form
+    public partial class GUIMostrar : Form
     {
-        public Form1()
+        public GUIMostrar()
         {
             InitializeComponent();
         }

@@ -52,6 +52,8 @@ namespace bibliotecaArchivos.servicios
 
             if(pos * NUM_BYTES > binaryReader.BaseStream.Length)
             {
+                binaryReader.Close();
+                archivo.Close();
                 throw new Exception("La posición indicada supera el máximo de libros existentes");
             }
             else

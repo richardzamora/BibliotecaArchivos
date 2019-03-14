@@ -22,15 +22,25 @@ namespace bibliotecaArchivos.interfaz
         {
             try
             {
-                int pos = 2;
+                Boolean bPos;
+                int pos;
+                bPos = int.TryParse(textPos.Text, out pos);
                 String ruta = txtRutaArchivo.Text;
-                Libro leer =servicios.ServiciosLibro.leerLibro(ruta, pos);
+                if (bPos && pos>0)
+                {
+                    Libro leer = servicios.ServiciosLibro.leerLibro(ruta, pos);
+                    textTitulo.Text = leer.getTitulo();
+                    textAutor.Text = leer.getAutor();
+                    textISBN.Text = ("" + leer.getIsbn());
+                    textNumero.Text = ("" + leer.getNumPaginas());
+                    DTFechaPublicacion.Value = leer.getFechaPublicacion();
+                }
+                else
+                {
+                    MessageBox.Show("La posición debe ser un número y mayor que 0");
+                }
 
-                textTitulo.Text = leer.getTitulo();
-                textAutor.Text = leer.getAutor();
-                textISBN.Text = ("" + leer.getIsbn());
-                textNumero.Text = ("" + leer.getNumPaginas());
-                DTFechaPublicacion.Value = leer.getFechaPublicacion();
+                
 
             }
             catch (Exception ex)

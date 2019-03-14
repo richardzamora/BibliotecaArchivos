@@ -43,6 +43,8 @@
             this.labAutor = new System.Windows.Forms.Label();
             this.labTitulo = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textPos = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +69,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.textPos);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.DTFechaPublicacion);
             this.panel1.Controls.Add(this.textNumero);
             this.panel1.Controls.Add(this.textISBN);
@@ -120,7 +124,7 @@
             // 
             // btnLeer
             // 
-            this.btnLeer.Location = new System.Drawing.Point(131, 137);
+            this.btnLeer.Location = new System.Drawing.Point(238, 137);
             this.btnLeer.Name = "btnLeer";
             this.btnLeer.Size = new System.Drawing.Size(81, 23);
             this.btnLeer.TabIndex = 5;
@@ -177,6 +181,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // textPos
+            // 
+            this.textPos.Location = new System.Drawing.Point(119, 137);
+            this.textPos.Name = "textPos";
+            this.textPos.Size = new System.Drawing.Size(86, 20);
+            this.textPos.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Posición: ";
+            // 
             // GUILeer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,5 +231,7 @@
         private System.Windows.Forms.Label labAutor;
         private System.Windows.Forms.Label labTitulo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textPos;
+        private System.Windows.Forms.Label label1;
     }
 }

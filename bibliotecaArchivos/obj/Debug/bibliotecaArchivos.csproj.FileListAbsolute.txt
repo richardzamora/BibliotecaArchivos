@@ -8,3 +8,4 @@ C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\biblioteca
 C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.csproj.GenerateResource.Cache
 C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.exe
 C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.pdb
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUILeer.resources

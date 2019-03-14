@@ -23,5 +23,11 @@ namespace bibliotecaArchivos
             GUIGrabar gui = new GUIGrabar();
             gui.Show();
         }
+
+        private void leerLibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUILeer gui = new GUILeer();
+            gui.Show();
+        }
     }
 }

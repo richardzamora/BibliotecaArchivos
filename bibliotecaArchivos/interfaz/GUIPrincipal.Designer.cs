@@ -33,6 +33,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grabarLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leerLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem,
-            this.grabarLibroToolStripMenuItem});
+            this.grabarLibroToolStripMenuItem,
+            this.leerLibroToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -74,6 +76,13 @@
             this.grabarLibroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.grabarLibroToolStripMenuItem.Text = "Grabar Libro";
             this.grabarLibroToolStripMenuItem.Click += new System.EventHandler(this.grabarLibroToolStripMenuItem_Click);
+            // 
+            // leerLibroToolStripMenuItem
+            // 
+            this.leerLibroToolStripMenuItem.Name = "leerLibroToolStripMenuItem";
+            this.leerLibroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.leerLibroToolStripMenuItem.Text = "Leer Libro";
+            this.leerLibroToolStripMenuItem.Click += new System.EventHandler(this.leerLibroToolStripMenuItem_Click);
             // 
             // GUIPrincipal
             // 
@@ -98,6 +107,7 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grabarLibroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leerLibroToolStripMenuItem;
     }
 }
 

@@ -26,6 +26,7 @@ namespace bibliotecaArchivos.interfaz
             {
                 Libro nuevo = this.crearLibro();
                 servicios.ServiciosLibro.grabarLibro(nuevo, ruta);
+                limpiarEspaciosDeTexto();
             }
             catch (Exception ex)
             {

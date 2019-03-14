@@ -78,6 +78,9 @@
     <EmbeddedResource Include="interfaz\GUIGrabar.resx">
       <DependentUpon>GUIGrabar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="interfaz\GUILeer.resx">
+      <DependentUpon>GUILeer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="interfaz\GUIPrincipal.resx">
       <DependentUpon>GUIPrincipal.cs</DependentUpon>
     </EmbeddedResource>

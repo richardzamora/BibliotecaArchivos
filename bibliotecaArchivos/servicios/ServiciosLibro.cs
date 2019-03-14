@@ -25,7 +25,41 @@ namespace bibliotecaArchivos.servicios
             br.Close();
             archivo.Close();
         }
+        public static Libro leerLibro(String ruta)
+        {
+            FileStream archivo;
+            BinaryReader binaryReader;
+            archivo = new FileStream(ruta, FileMode.Open);
+            binaryReader = new BinaryReader(archivo, Encoding.UTF8);
 
+            string pTitulo = null;
+            string pAutor = null;
+            long pIsbn = 0;
+            int pNumPag = 0;
+            DateTime pFecha = default(DateTime);
+
+            while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
+            {
+
+               
+
+                char estado = binaryReader.ReadChar();
+                pTitulo = binaryReader.ReadString();
+                pAutor = binaryReader.ReadString();
+                pIsbn = binaryReader.ReadInt64();
+                pNumPag = binaryReader.ReadInt32();
+                long binDate = binaryReader.ReadInt64();
+                pFecha = DateTime.FromBinary(binDate);
+                
+               
+            }
+           
+            Libro nuevo = new Libro(pTitulo, pAutor, pIsbn, pNumPag, pFecha);
+           
+            binaryReader.Close();
+            archivo.Close();
+            return nuevo;
+        }
 
 
 

@@ -8,16 +8,25 @@ namespace bibliotecaArchivos.estructural
 {
     class Libro
     {
+        private char estado;
+
         private String titulo;
         private String autor;
         private int numPaginas;
         private long isbn;
         private DateTime fechaPublicacion;
-        private char estado;
         
-        public Libro (String pTitulo)
+        
+        public Libro (String pTitulo, String pAutor,  long pIsbn, int pNumPag, DateTime pFecha)
         {
-            titulo = String.Format("{-100}", pTitulo);
+            //          titulo = String.Format("{-100}", pTitulo);
+            //          autor = String.Format("{-50}", pAutor);
+            titulo = pTitulo;
+            autor = pAutor;
+            numPaginas = pNumPag;
+            isbn = pIsbn;
+            fechaPublicacion = pFecha;
+            estado = 'A';
         }
 
         public String getTitulo()
@@ -70,6 +79,14 @@ namespace bibliotecaArchivos.estructural
         }
 
 
+        /*
+         * Casos de uso
+         */ 
+        //Leer registro del archivo
+        //Grabar registro en el archivo
+        //Actualizar registro en el archivo
+        //Eliminar registro del archivo
+        //Volcar datos al archivo
 
 
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bibliotecaArchivos.interfaz;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace bibliotecaArchivos
         public GUIPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void grabarLibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUIGrabar gui = new GUIGrabar();
+            gui.Show();
         }
     }
 }

@@ -1,1 +1,10 @@
 C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\bin\Debug\bibliotecaArchivos.exe.config
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\bin\Debug\bibliotecaArchivos.exe
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\bin\Debug\bibliotecaArchivos.pdb
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.csprojResolveAssemblyReference.cache
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUIGrabar.resources
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.GUIPrincipal.resources
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.Properties.Resources.resources
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.csproj.GenerateResource.Cache
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.exe
+C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.pdb

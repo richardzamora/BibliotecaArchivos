@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="estructural\Libro.cs" />
+    <Compile Include="Excepciones\LibroException.cs" />
     <Compile Include="interfaz\GUIGrabar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +75,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="servicios\ServiciosLibro.cs" />
+    <EmbeddedResource Include="interfaz\GUIGrabar.resx">
+      <DependentUpon>GUIGrabar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="interfaz\GUIPrincipal.resx">
       <DependentUpon>GUIPrincipal.cs</DependentUpon>
     </EmbeddedResource>

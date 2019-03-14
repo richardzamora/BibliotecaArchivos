@@ -22,8 +22,9 @@ namespace bibliotecaArchivos.interfaz
         {
             try
             {
+                int pos = 2;
                 String ruta = txtRutaArchivo.Text;
-                Libro leer =servicios.ServiciosLibro.leerLibro(ruta);
+                Libro leer =servicios.ServiciosLibro.leerLibro(ruta, pos);
 
                 textTitulo.Text = leer.getTitulo();
                 textAutor.Text = leer.getAutor();

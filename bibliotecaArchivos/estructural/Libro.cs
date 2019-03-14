@@ -95,16 +95,5 @@ namespace bibliotecaArchivos.estructural
             this.estado = estado;
         }
 
-
-        /*
-         * Casos de uso
-         */ 
-        //Leer registro del archivo
-        //Grabar registro en el archivo
-        //Actualizar registro en el archivo
-        //Eliminar registro del archivo
-        //Volcar datos al archivo
-
-
     }
 }

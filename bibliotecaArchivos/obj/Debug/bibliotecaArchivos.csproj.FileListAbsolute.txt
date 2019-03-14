@@ -9,3 +9,14 @@ C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\biblioteca
 C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.exe
 C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.pdb
 C:\Users\Richard\escritorio\2220171018\VisualSpace\bibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUILeer.resources
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\bin\Debug\bibliotecaArchivos.exe.config
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.exe
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.pdb
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\bin\Debug\bibliotecaArchivos.exe
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\bin\Debug\bibliotecaArchivos.pdb
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.csprojResolveAssemblyReference.cache
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUIGrabar.resources
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUILeer.resources
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.GUIPrincipal.resources
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.Properties.Resources.resources
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.csproj.GenerateResource.Cache

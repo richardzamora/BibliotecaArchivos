@@ -20,3 +20,4 @@ D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\biblioteca
 D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.GUIPrincipal.resources
 D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.Properties.Resources.resources
 D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.csproj.GenerateResource.Cache
+C:\Users\Richard\escritorio\2220171018\VisualSpace\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUIEliminar.resources

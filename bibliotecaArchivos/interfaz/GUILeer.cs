@@ -40,17 +40,11 @@ namespace bibliotecaArchivos.interfaz
                     MessageBox.Show("La posición debe ser un número y mayor que 0");
                 }
 
-                
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-               
-
-           
-        
         }
 
         private void btnSeleccionarArchivo_Click(object sender, EventArgs e)

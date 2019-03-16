@@ -29,5 +29,11 @@ namespace bibliotecaArchivos
             GUILeer gui = new GUILeer();
             gui.Show();
         }
+
+        private void eliminarLibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUIEliminar gui = new GUIEliminar();
+            gui.Show();
+        }
     }
 }

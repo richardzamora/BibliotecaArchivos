@@ -14,11 +14,11 @@ namespace bibliotecaArchivos.servicios
         /*
          * Casos de uso
          */
-        //Leer registro del archivo             ---> casi Full (falta verificar si funciona si el nodo esta eliminado)
+        //Leer registro del archivo             ---> Full
         //Grabar registro en el archivo         ---> Full
-        //Actualizar registro en el archivo     --->
-        //Eliminar registro del archivo         --->
-        //Volcar datos al archivo               --->
+        //Actualizar registro en el archivo     ---> 
+        //Eliminar registro del archivo         ---> Full
+        //Volcar datos al archivo               ---> 
 
         public static void grabarLibro(Libro nuevoLibro, String ruta)
         {

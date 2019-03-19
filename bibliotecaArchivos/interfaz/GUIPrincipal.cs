@@ -35,5 +35,10 @@ namespace bibliotecaArchivos
             GUIEliminar gui = new GUIEliminar();
             gui.Show();
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Creado por:\nEzequiel Melo Bustos - 2220171073 \nRichard Javier Zamora Herrera - 2220171018", "Creditos");
+        }
     }
 }

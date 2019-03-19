@@ -47,7 +47,20 @@ namespace bibliotecaArchivos.interfaz
 
         private void btnVolcarDatos_Click(object sender, EventArgs e)
         {
-            servicios.ServiciosLibro.volcarArchivos(txtRutaArchivoOrigen.Text, txtRutaArchivoDestino.Text);
+            try
+            {
+                servicios.ServiciosLibro.volcarArchivos(txtRutaArchivoOrigen.Text, txtRutaArchivoDestino.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El archivo generado debe tener como separador ';'");
         }
     }
 }

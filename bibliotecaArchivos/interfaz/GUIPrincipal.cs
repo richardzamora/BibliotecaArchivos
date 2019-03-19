@@ -40,5 +40,22 @@ namespace bibliotecaArchivos
         {
             MessageBox.Show("Creado por:\nEzequiel Melo Bustos - 2220171073 \nRichard Javier Zamora Herrera - 2220171018", "Creditos");
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void volcarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUIVolcarDatos gui = new GUIVolcarDatos();
+            gui.Show();
+        }
+
+        private void actualizarLibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUIActualizar gui = new GUIActualizar();
+            gui.Show();
+        }
     }
 }

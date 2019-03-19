@@ -26,7 +26,7 @@ namespace bibliotecaArchivos.interfaz
                 int pos;
                 bPos = int.TryParse(textPos.Text, out pos);
                 String ruta = txtRutaArchivo.Text;
-                if (bPos && pos>0)
+                if (bPos && pos > 0)
                 {
                     Libro leer = servicios.ServiciosLibro.leerLibro(ruta, pos);
                     textTitulo.Text = leer.getTitulo();
@@ -57,6 +57,16 @@ namespace bibliotecaArchivos.interfaz
             openFileDialog1.ShowDialog();
 
             txtRutaArchivo.Text = openFileDialog1.FileName;
+        }
+
+        private void txtRutaArchivo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

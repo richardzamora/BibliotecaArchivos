@@ -106,6 +106,7 @@
             // 
             // DTFechaPublicacion
             // 
+            this.DTFechaPublicacion.Enabled = false;
             this.DTFechaPublicacion.Location = new System.Drawing.Point(119, 96);
             this.DTFechaPublicacion.Name = "DTFechaPublicacion";
             this.DTFechaPublicacion.Size = new System.Drawing.Size(200, 20);
@@ -113,6 +114,7 @@
             // 
             // textNumero
             // 
+            this.textNumero.Enabled = false;
             this.textNumero.Location = new System.Drawing.Point(119, 70);
             this.textNumero.Name = "textNumero";
             this.textNumero.Size = new System.Drawing.Size(200, 20);
@@ -120,6 +122,7 @@
             // 
             // textISBN
             // 
+            this.textISBN.Enabled = false;
             this.textISBN.Location = new System.Drawing.Point(119, 48);
             this.textISBN.Name = "textISBN";
             this.textISBN.Size = new System.Drawing.Size(200, 20);
@@ -127,6 +130,7 @@
             // 
             // textAutor
             // 
+            this.textAutor.Enabled = false;
             this.textAutor.Location = new System.Drawing.Point(119, 26);
             this.textAutor.Name = "textAutor";
             this.textAutor.Size = new System.Drawing.Size(200, 20);
@@ -134,6 +138,7 @@
             // 
             // textTitulo
             // 
+            this.textTitulo.Enabled = false;
             this.textTitulo.Location = new System.Drawing.Point(119, 4);
             this.textTitulo.Name = "textTitulo";
             this.textTitulo.Size = new System.Drawing.Size(200, 20);

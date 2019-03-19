@@ -35,6 +35,7 @@
             this.txtRutaArchivoDestino = new System.Windows.Forms.TextBox();
             this.labArchivoDestino = new System.Windows.Forms.Label();
             this.labArchivoOrigen = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSeleccionarArchivo
@@ -101,11 +102,22 @@
             this.labArchivoOrigen.TabIndex = 18;
             this.labArchivoOrigen.Text = "Archivo de Origen";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(278, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 19);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GUIVolcarDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 167);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labArchivoOrigen);
             this.Controls.Add(this.labArchivoDestino);
             this.Controls.Add(this.btnSeleccionarArchivoDestino);
@@ -128,5 +140,6 @@
         private System.Windows.Forms.TextBox txtRutaArchivoDestino;
         private System.Windows.Forms.Label labArchivoDestino;
         private System.Windows.Forms.Label labArchivoOrigen;
+        private System.Windows.Forms.Button button1;
     }
 }

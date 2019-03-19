@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace bibliotecaArchivos.servicios
 {
-    class  ServiciosLibro
+    class ServiciosLibro
     {
         public const int NUM_BYTES = 173;
         /*
@@ -68,7 +68,7 @@ namespace bibliotecaArchivos.servicios
                     {
                         binaryReader.Close();
                         archivo.Close();
-                       throw new Exception("La posición indicada supera el máximo de libros existentes");
+                        throw new Exception("La posición indicada supera el máximo de libros existentes");
                     }
                     estado = binaryReader.ReadChar();
                     pTitulo = binaryReader.ReadString();
@@ -77,11 +77,11 @@ namespace bibliotecaArchivos.servicios
                     pNumPag = binaryReader.ReadInt32();
                     long binDate = binaryReader.ReadInt64();
                     pFecha = DateTime.FromBinary(binDate);
-                   
+
                 }
             }
             Libro nuevo = new Libro(pTitulo, pAutor, pIsbn, pNumPag, pFecha);
-           
+
             binaryReader.Close();
             archivo.Close();
             return nuevo;
@@ -127,27 +127,23 @@ namespace bibliotecaArchivos.servicios
                         throw new Exception("La posición indicada supera el máximo de libros existentes");
                     }
                     estado = binaryReader.ReadChar();
-                     if (estado == 'A')
+                    if (estado == 'A')
                     {
                         bW.BaseStream.Position = binaryReader.BaseStream.Position - 1;
                         bW.Write('E');
-                       
+
                     }
                     else
-                    { 
-                    pTitulo = binaryReader.ReadString();
-                    pAutor = binaryReader.ReadString();
-                    pIsbn = binaryReader.ReadInt64();
-                    pNumPag = binaryReader.ReadInt32();
-                    long binDate = binaryReader.ReadInt64();
-                    pFecha = DateTime.FromBinary(binDate);
+                    {
+                        pTitulo = binaryReader.ReadString();
+                        pAutor = binaryReader.ReadString();
+                        pIsbn = binaryReader.ReadInt64();
+                        pNumPag = binaryReader.ReadInt32();
+                        long binDate = binaryReader.ReadInt64();
+                        pFecha = DateTime.FromBinary(binDate);
                     }
-                    
-
                 }
-
             }
-
             binaryReader.Close();
             bW.Close();
             archivo.Close();

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using bibliotecaArchivos.estructural;
+using bibliotecaArchivos.Excepciones;
+
 namespace bibliotecaArchivos.interfaz
 {
     public partial class GUIActualizar : Form
@@ -54,7 +56,7 @@ namespace bibliotecaArchivos.interfaz
 
                     if (bIsbn && isbn > 0)
                     {
-                        Libro leer = servicios.ServiciosLibro.leerLibroISBN(ruta, isbn);
+                        Libro leer = servicios.ServiciosLibro.buscarLibroISBN(ruta, isbn);
                         textTitulo.Text = leer.getTitulo();
                         textAutor.Text = leer.getAutor();
                         textISBN.Text = ("" + leer.getIsbn());
@@ -95,7 +97,81 @@ namespace bibliotecaArchivos.interfaz
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Boolean bIsbn;
+                long isbn;
+                bIsbn = long.TryParse(textCriterio.Text, out isbn);
+                String ruta = txtRutaArchivo.Text;
+                Libro actualizado = crearLibro();
+                servicios.ServiciosLibro.actualizarLibro(isbn,ruta,actualizado);
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private Libro crearLibro()
+        {
+            Boolean bNumPag;
+            Boolean bIsbn;
+
+            Libro nuevoLibro = null;
+            String motivo = "actualizar";
+
+            String titulo = textTitulo.Text;
+            String autor = textAutor.Text;
+
+            DateTime fechaPublicacion = DTFechaPublicacion.Value;
+            int numeroPaginas;
+            long isbn;
+
+            bNumPag = int.TryParse(textNumero.Text, out numeroPaginas);
+            bIsbn = long.TryParse(textISBN.Text, out isbn);
+            if (titulo.Equals(""))
+            {
+                DateTime momento = DateTime.Now;
+                String causa = "el título ingresado es incorrecto, por favor ingrese un valor valido";
+                LibroException ex = new LibroException(motivo, momento, causa);
+                throw ex;
+            }
+            else if (autor.Equals(""))
+            {
+                DateTime momento = DateTime.Now;
+                String causa = "el autor ingresado es incorrecto, por favor ingrese un valor valido";
+                LibroException ex = new LibroException(motivo, momento, causa);
+                throw ex;
+            }
+            else if (!bIsbn && isbn >= 0)
+            {
+                DateTime momento = DateTime.Now;
+                String causa = "el ISBN ingresado es incorrecto, por favor ingrese un valor valido";
+                LibroException ex = new LibroException(motivo, momento, causa);
+                throw ex;
+            }
+            else if (!bNumPag && numeroPaginas >= 0)
+            {
+                DateTime momento = DateTime.Now;
+                String causa = "el numero de paginas ingresado es incorrecto, por favor ingrese un valor valido";
+                LibroException ex = new LibroException(motivo, momento, causa);
+                throw ex;
+            }
+            else if (DateTime.Compare(fechaPublicacion, DateTime.Now) > 0)
+            {
+                DateTime momento = DateTime.Now;
+                String causa = "La fecha de publicacion no puede ser mayor a la actual, por favor ingrese un valor valido";
+                LibroException ex = new LibroException(motivo, momento, causa);
+                throw ex;
+            }
+            else
+            {
+                nuevoLibro = new Libro(titulo, autor, isbn, numeroPaginas, fechaPublicacion);
+
+            }
+
+            return nuevoLibro;
         }
     }
 }

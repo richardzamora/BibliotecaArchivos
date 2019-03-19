@@ -59,7 +59,6 @@ namespace bibliotecaArchivos.servicios
             }
             else
             {
-
                 binaryReader.BaseStream.Position = pos * NUM_BYTES;
                 char estado = 'P';
                 while (estado != 'A')
@@ -70,6 +69,7 @@ namespace bibliotecaArchivos.servicios
                         archivo.Close();
                         throw new Exception("La posición indicada supera el máximo de libros existentes");
                     }
+
                     estado = binaryReader.ReadChar();
                     pTitulo = binaryReader.ReadString();
                     pAutor = binaryReader.ReadString();
@@ -77,13 +77,14 @@ namespace bibliotecaArchivos.servicios
                     pNumPag = binaryReader.ReadInt32();
                     long binDate = binaryReader.ReadInt64();
                     pFecha = DateTime.FromBinary(binDate);
-
                 }
             }
+
             Libro nuevo = new Libro(pTitulo, pAutor, pIsbn, pNumPag, pFecha);
 
             binaryReader.Close();
             archivo.Close();
+
             return nuevo;
         }
 
@@ -180,6 +181,16 @@ namespace bibliotecaArchivos.servicios
 
             sr.Close();
             archivo.Close();
+        }
+
+        public static Libro leerLibroISBN(String ruta, long isbn)
+        {
+            return null;
+        }
+
+        public static void actualizarLibro()
+        {
+
         }
     }
 }

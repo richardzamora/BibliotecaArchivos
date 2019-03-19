@@ -35,11 +35,10 @@ namespace bibliotecaArchivos.estructural
             {
                 autor = String.Format("{0,-50}", pAutor);
             }
-          //          titulo = String.Format("{0,-100}", pTitulo);
-
-          //          autor = String.Format("{0,-50}", pAutor);
-          //  titulo = pTitulo;
-          //  autor = pAutor;
+          //titulo = String.Format("{0,-100}", pTitulo);
+          //autor = String.Format("{0,-50}", pAutor);
+          //titulo = pTitulo;
+          //autor = pAutor;
             numPaginas = pNumPag;
             isbn = pIsbn;
             fechaPublicacion = pFecha;
@@ -94,6 +93,5 @@ namespace bibliotecaArchivos.estructural
         {
             this.estado = estado;
         }
-
     }
 }

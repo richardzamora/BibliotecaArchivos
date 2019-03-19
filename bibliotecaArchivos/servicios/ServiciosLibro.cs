@@ -35,6 +35,7 @@ namespace bibliotecaArchivos.servicios
             br.Close();
             archivo.Close();
         }
+
         public static Libro leerLibro(String ruta, int pos)
         {
             FileStream archivo;
@@ -84,7 +85,8 @@ namespace bibliotecaArchivos.servicios
             binaryReader.Close();
             archivo.Close();
             return nuevo;
-            }
+        }
+
         public static void eliminarLibroPosicion(String ruta, int pos)
         {
             FileStream archivo;
@@ -149,8 +151,39 @@ namespace bibliotecaArchivos.servicios
             binaryReader.Close();
             bW.Close();
             archivo.Close();
-            
         }
 
+        public static void volcarArchivos(String pRutaOrigen, String pRutaDestino)
+        {
+            Libro libro;
+
+            FileStream archivo;
+            String cad;
+            String[] subCadenas;
+
+            archivo = new FileStream(pRutaOrigen, FileMode.Open);
+            StreamReader sr;
+            sr = new StreamReader(archivo, Encoding.UTF8);
+
+            while (true)
+            {
+                cad = sr.ReadLine();
+                if (cad == null || cad.Length == 0)
+                {
+                    break;
+                }
+                subCadenas = cad.Split(';');
+                long isbn = long.Parse(subCadenas[2]);
+                int numPaginas = int.Parse(subCadenas[3]);
+                DateTime fecha = DateTime.Parse(subCadenas[4]);
+
+                libro = new Libro(subCadenas[0], subCadenas[1], isbn, numPaginas, fecha);
+
+                grabarLibro(libro, pRutaDestino);
+            }
+
+            sr.Close();
+            archivo.Close();
+        }
     }
 }

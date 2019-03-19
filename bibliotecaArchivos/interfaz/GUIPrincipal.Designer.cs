@@ -36,6 +36,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.volcarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.grabarLibroToolStripMenuItem,
             this.leerLibroToolStripMenuItem,
             this.eliminarLibroToolStripMenuItem,
+            this.volcarDatosToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
@@ -64,28 +66,28 @@
             // grabarLibroToolStripMenuItem
             // 
             this.grabarLibroToolStripMenuItem.Name = "grabarLibroToolStripMenuItem";
-            this.grabarLibroToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.grabarLibroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.grabarLibroToolStripMenuItem.Text = "Grabar Libro";
             this.grabarLibroToolStripMenuItem.Click += new System.EventHandler(this.grabarLibroToolStripMenuItem_Click);
             // 
             // leerLibroToolStripMenuItem
             // 
             this.leerLibroToolStripMenuItem.Name = "leerLibroToolStripMenuItem";
-            this.leerLibroToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.leerLibroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.leerLibroToolStripMenuItem.Text = "Leer Libro";
             this.leerLibroToolStripMenuItem.Click += new System.EventHandler(this.leerLibroToolStripMenuItem_Click);
             // 
             // eliminarLibroToolStripMenuItem
             // 
             this.eliminarLibroToolStripMenuItem.Name = "eliminarLibroToolStripMenuItem";
-            this.eliminarLibroToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.eliminarLibroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.eliminarLibroToolStripMenuItem.Text = "Eliminar Libro";
             this.eliminarLibroToolStripMenuItem.Click += new System.EventHandler(this.eliminarLibroToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // ayudaToolStripMenuItem
@@ -99,9 +101,15 @@
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de...";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            // 
+            // volcarDatosToolStripMenuItem
+            // 
+            this.volcarDatosToolStripMenuItem.Name = "volcarDatosToolStripMenuItem";
+            this.volcarDatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.volcarDatosToolStripMenuItem.Text = "Volcar Datos";
             // 
             // GUIPrincipal
             // 
@@ -129,6 +137,7 @@
         private System.Windows.Forms.ToolStripMenuItem leerLibroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarLibroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem volcarDatosToolStripMenuItem;
     }
 }
 

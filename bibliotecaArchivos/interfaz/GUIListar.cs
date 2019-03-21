@@ -34,32 +34,33 @@ namespace bibliotecaArchivos.interfaz
         {
             dtaDatos.Rows.Clear();
             char estado = ' ';
-            int i = 0;
+            int i = 1;
 
             FileStream archivo;
             BinaryReader binaryReader;
             archivo = new FileStream(txtRutaArchivo.Text, FileMode.Open);
             binaryReader = new BinaryReader(archivo, Encoding.UTF8);
 
+            string pTitulo = null;
+            string pAutor = null;
+            long pIsbn = 0;
+            int pNumPag = 0;
+            DateTime pFecha = default(DateTime);
+
             while (binaryReader.BaseStream.Position < binaryReader.BaseStream.Length)
             {
-                dtaDatos.Rows.Add();
-                dtaDatos.Rows[i].Cells[0].Value = i+1;
+ 
                 estado = binaryReader.ReadChar();
-
-                if(estado == 'A')
+                pTitulo = binaryReader.ReadString();
+                pAutor = binaryReader.ReadString();
+                pIsbn = binaryReader.ReadInt64();
+                pNumPag = binaryReader.ReadInt32();
+                long binDate = binaryReader.ReadInt64();
+                pFecha = DateTime.FromBinary(binDate);
+                if (estado=='A')
                 {
-                    
-                    dtaDatos.Rows[i].Cells[1].Value = binaryReader.ReadString();
-                    dtaDatos.Rows[i].Cells[2].Value = binaryReader.ReadString();
-                    dtaDatos.Rows[i].Cells[3].Value = binaryReader.ReadInt64(); 
-                    dtaDatos.Rows[i].Cells[4].Value = binaryReader.ReadInt32();
-                    long binDate = binaryReader.ReadInt64();
-                    DateTime fecha = DateTime.FromBinary(binDate);
-                    String strFecha = fecha.ToString("dd/MM/yyyy");
-                    dtaDatos.Rows[i].Cells[5].Value = strFecha;
+                    dtaDatos.Rows.Add(i, pTitulo, pAutor, pIsbn, pNumPag, pFecha);
                 }
-
                 i++;
             }
             binaryReader.Close();

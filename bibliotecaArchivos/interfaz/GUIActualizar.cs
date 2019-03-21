@@ -43,6 +43,15 @@ namespace bibliotecaArchivos.interfaz
             DTFechaPublicacion.Enabled = true;
         }
 
+        private void deshabilitar()
+        {
+            textTitulo.Enabled = false;
+            textAutor.Enabled = false;
+            textISBN.Enabled = false;
+            textNumero.Enabled = false;
+            DTFechaPublicacion.Enabled = false;
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -105,12 +114,16 @@ namespace bibliotecaArchivos.interfaz
                 String ruta = txtRutaArchivo.Text;
                 Libro actualizado = crearLibro();
                 servicios.ServiciosLibro.actualizarLibro(isbn,ruta,actualizado);
+
+                MessageBox.Show("Se ha actualizado el libro correctamente.");
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
+
+            deshabilitar();
         }
 
         private Libro crearLibro()

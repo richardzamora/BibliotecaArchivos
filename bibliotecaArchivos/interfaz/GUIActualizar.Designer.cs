@@ -70,7 +70,6 @@
             this.txtRutaArchivo.Name = "txtRutaArchivo";
             this.txtRutaArchivo.Size = new System.Drawing.Size(296, 20);
             this.txtRutaArchivo.TabIndex = 8;
-            this.txtRutaArchivo.Text = "C:\\Users\\Richard\\Desktop\\variables.txt";
             // 
             // panel1
             // 

@@ -306,5 +306,51 @@ namespace bibliotecaArchivos.servicios
             archivo.Close();
 
         }
+
+        public static Libro volcarALista(String ruta)
+        {
+            Libro cabeza = null;
+            char estado = ' ';
+            FileStream archivo;
+            BinaryReader binaryReader;
+            archivo = new FileStream(ruta, FileMode.Open);
+            binaryReader = new BinaryReader(archivo, Encoding.UTF8);
+
+            while (binaryReader.BaseStream.Position < binaryReader.BaseStream.Length)
+            {
+                estado = binaryReader.ReadChar();
+
+                if (estado == 'A')
+                {
+
+                    String titulo = binaryReader.ReadString();
+                    String autor = binaryReader.ReadString();
+                    long isbn = binaryReader.ReadInt64();
+                    int numPag = binaryReader.ReadInt32();
+                    long binDate = binaryReader.ReadInt64();
+                    DateTime fecha = DateTime.FromBinary(binDate);
+
+                    Libro nuevo = new Libro(titulo, autor, isbn, numPag, fecha);
+
+                    if(cabeza == null)
+                    {
+                        cabeza = nuevo;
+                    }
+                    else
+                    {
+                        nuevo.setSig(cabeza);
+                        cabeza = nuevo;
+                    }
+                }
+
+                
+            }
+ 
+            binaryReader.Close();
+            archivo.Close();
+            return cabeza;
+        }
+
+
     }
 }

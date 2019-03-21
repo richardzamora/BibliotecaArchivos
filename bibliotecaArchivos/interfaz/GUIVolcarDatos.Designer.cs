@@ -55,7 +55,6 @@
             this.txtRutaArchivoOrigen.Name = "txtRutaArchivoOrigen";
             this.txtRutaArchivoOrigen.Size = new System.Drawing.Size(296, 20);
             this.txtRutaArchivoOrigen.TabIndex = 12;
-            this.txtRutaArchivoOrigen.Text = "C:\\Users\\Richard\\Desktop\\variables.txt";
             // 
             // btnVolcarDatos
             // 
@@ -83,7 +82,6 @@
             this.txtRutaArchivoDestino.Name = "txtRutaArchivoDestino";
             this.txtRutaArchivoDestino.Size = new System.Drawing.Size(296, 20);
             this.txtRutaArchivoDestino.TabIndex = 15;
-            this.txtRutaArchivoDestino.Text = "C:\\Users\\Richard\\Desktop\\variables.txt";
             // 
             // labArchivoDestino
             // 
@@ -131,7 +129,7 @@
             this.Controls.Add(this.btnSeleccionarArchivo);
             this.Controls.Add(this.txtRutaArchivoOrigen);
             this.Name = "GUIVolcarDatos";
-            this.Text = "GUIVolcarDatos";
+            this.Text = "Volcar Datos";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -96,6 +96,12 @@
     <Compile Include="interfaz\GUIVolcarDatos.Designer.cs">
       <DependentUpon>GUIVolcarDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="interfaz\GUIVolcarLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz\GUIVolcarLista.Designer.cs">
+      <DependentUpon>GUIVolcarLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="servicios\ServiciosLibro.cs" />
@@ -114,11 +120,17 @@
     <EmbeddedResource Include="interfaz\GUIListar.resx">
       <DependentUpon>GUIListar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="interfaz\GUIMostrar.resx">
+      <DependentUpon>GUIMostrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="interfaz\GUIPrincipal.resx">
       <DependentUpon>GUIPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="interfaz\GUIVolcarDatos.resx">
       <DependentUpon>GUIVolcarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz\GUIVolcarLista.resx">
+      <DependentUpon>GUIVolcarLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

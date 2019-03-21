@@ -68,5 +68,11 @@ namespace bibliotecaArchivos
         {
 
         }
+
+        private void volcarAListaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUIVolcarLista gui = new GUIVolcarLista();
+            gui.Show();
+        }
     }
 }

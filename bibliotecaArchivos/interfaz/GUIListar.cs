@@ -44,18 +44,19 @@ namespace bibliotecaArchivos.interfaz
             while (binaryReader.BaseStream.Position < binaryReader.BaseStream.Length)
             {
                 dtaDatos.Rows.Add();
-                dtaDatos.Rows[i].Cells[0].Value = i;
+                dtaDatos.Rows[i].Cells[0].Value = i+1;
                 estado = binaryReader.ReadChar();
 
                 if(estado == 'A')
                 {
-                    long binDate = binaryReader.ReadInt64();
-                    DateTime fecha = DateTime.FromBinary(binDate);
-                    String strFecha = fecha.ToString("dd/MM/yyyy");
+                    
                     dtaDatos.Rows[i].Cells[1].Value = binaryReader.ReadString();
                     dtaDatos.Rows[i].Cells[2].Value = binaryReader.ReadString();
                     dtaDatos.Rows[i].Cells[3].Value = binaryReader.ReadInt64(); 
                     dtaDatos.Rows[i].Cells[4].Value = binaryReader.ReadInt32();
+                    long binDate = binaryReader.ReadInt64();
+                    DateTime fecha = DateTime.FromBinary(binDate);
+                    String strFecha = fecha.ToString("dd/MM/yyyy");
                     dtaDatos.Rows[i].Cells[5].Value = strFecha;
                 }
 

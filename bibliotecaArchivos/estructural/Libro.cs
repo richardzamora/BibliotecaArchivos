@@ -15,7 +15,8 @@ namespace bibliotecaArchivos.estructural
         private int numPaginas;
         private long isbn;
         private DateTime fechaPublicacion;
-        
+
+        private Libro sig;
         
         public Libro (String pTitulo, String pAutor,  long pIsbn, int pNumPag, DateTime pFecha)
         {
@@ -44,6 +45,8 @@ namespace bibliotecaArchivos.estructural
             isbn = pIsbn;
             numPaginas = pNumPag;
             fechaPublicacion = pFecha;
+
+            this.sig = null;
             
         }
 
@@ -94,6 +97,16 @@ namespace bibliotecaArchivos.estructural
         public void setEstado(char estado)
         {
             this.estado = estado;
+        }
+
+        public void setSig(Libro nuevo)
+        {
+            this.sig = nuevo;
+        }
+
+        public Libro getSig()
+        {
+            return sig;
         }
     }
 }

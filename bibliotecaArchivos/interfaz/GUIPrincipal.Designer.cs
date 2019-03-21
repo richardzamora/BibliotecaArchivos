@@ -36,12 +36,13 @@
             this.actualizarLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volcarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarLibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listarLibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.volcarAListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,10 +51,11 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
+            this.volcarAListaToolStripMenuItem,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(339, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(342, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -107,6 +109,13 @@
             this.volcarDatosToolStripMenuItem.Text = "Volcar Datos";
             this.volcarDatosToolStripMenuItem.Click += new System.EventHandler(this.volcarDatosToolStripMenuItem_Click);
             // 
+            // listarLibosToolStripMenuItem
+            // 
+            this.listarLibosToolStripMenuItem.Name = "listarLibosToolStripMenuItem";
+            this.listarLibosToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.listarLibosToolStripMenuItem.Text = "Listar Libos";
+            this.listarLibosToolStripMenuItem.Click += new System.EventHandler(this.listarLibosToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -133,7 +142,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(110, 177);
+            this.label1.Location = new System.Drawing.Point(97, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 31);
             this.label1.TabIndex = 4;
@@ -142,25 +151,25 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(260, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // listarLibosToolStripMenuItem
+            // volcarAListaToolStripMenuItem
             // 
-            this.listarLibosToolStripMenuItem.Name = "listarLibosToolStripMenuItem";
-            this.listarLibosToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.listarLibosToolStripMenuItem.Text = "Listar Libos";
-            this.listarLibosToolStripMenuItem.Click += new System.EventHandler(this.listarLibosToolStripMenuItem_Click);
+            this.volcarAListaToolStripMenuItem.Name = "volcarAListaToolStripMenuItem";
+            this.volcarAListaToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.volcarAListaToolStripMenuItem.Text = "Volcar a Lista";
+            this.volcarAListaToolStripMenuItem.Click += new System.EventHandler(this.volcarAListaToolStripMenuItem_Click);
             // 
             // GUIPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 247);
+            this.ClientSize = new System.Drawing.Size(342, 253);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -190,6 +199,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem listarLibosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem volcarAListaToolStripMenuItem;
     }
 }
 

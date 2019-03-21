@@ -65,7 +65,6 @@
             this.txtRutaArchivo.Name = "txtRutaArchivo";
             this.txtRutaArchivo.Size = new System.Drawing.Size(296, 20);
             this.txtRutaArchivo.TabIndex = 8;
-            this.txtRutaArchivo.Text = "C:\\Users\\Richard\\Desktop\\variables.txt";
             // 
             // panel1
             // 
@@ -223,7 +222,7 @@
             this.Controls.Add(this.txtRutaArchivo);
             this.Controls.Add(this.panel1);
             this.Name = "GUIEliminar";
-            this.Text = "GUIEliminar";
+            this.Text = "Eliminar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

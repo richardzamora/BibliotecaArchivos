@@ -64,7 +64,6 @@
             this.txtRutaArchivo.Name = "txtRutaArchivo";
             this.txtRutaArchivo.Size = new System.Drawing.Size(296, 20);
             this.txtRutaArchivo.TabIndex = 5;
-            this.txtRutaArchivo.Text = "C:\\Users\\Richard\\Desktop\\variables.txt";
             this.txtRutaArchivo.TextChanged += new System.EventHandler(this.txtRutaArchivo_TextChanged);
             // 
             // panel1
@@ -151,7 +150,7 @@
             this.btnLeer.Name = "btnLeer";
             this.btnLeer.Size = new System.Drawing.Size(81, 23);
             this.btnLeer.TabIndex = 5;
-            this.btnLeer.Text = "Leer(1)";
+            this.btnLeer.Text = "Leer";
             this.btnLeer.UseVisualStyleBackColor = true;
             this.btnLeer.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
@@ -213,7 +212,7 @@
             this.Controls.Add(this.txtRutaArchivo);
             this.Controls.Add(this.panel1);
             this.Name = "GUILeer";
-            this.Text = "GUILeer";
+            this.Text = "Leer";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

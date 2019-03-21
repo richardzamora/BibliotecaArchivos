@@ -27,3 +27,4 @@ D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\biblioteca
 D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUIEliminar.resources
 D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUIVolcarDatos.resources
 D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUIListar.resources
+D:\Carpetas\Documentos\Visual Studio 2015\Projects\BibliotecaArchivos\bibliotecaArchivos\obj\Debug\bibliotecaArchivos.interfaz.GUIVolcarLista.resources

@@ -31,32 +31,32 @@
             this.btnSeleccionarArchivo = new System.Windows.Forms.Button();
             this.txtRutaArchivo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textCriterio = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.DTFechaPublicacion = new System.Windows.Forms.DateTimePicker();
             this.textNumero = new System.Windows.Forms.TextBox();
             this.textISBN = new System.Windows.Forms.TextBox();
             this.textAutor = new System.Windows.Forms.TextBox();
             this.textTitulo = new System.Windows.Forms.TextBox();
-            this.btnLeer = new System.Windows.Forms.Button();
             this.labFechaPublicacion = new System.Windows.Forms.Label();
             this.labPaginas = new System.Windows.Forms.Label();
             this.labISBN = new System.Windows.Forms.Label();
             this.labAutor = new System.Windows.Forms.Label();
             this.labTitulo = new System.Windows.Forms.Label();
+            this.textCriterio = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rBPos = new System.Windows.Forms.RadioButton();
+            this.rBIsbn = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnHabilitar = new System.Windows.Forms.Button();
-            this.rBIsbn = new System.Windows.Forms.RadioButton();
-            this.rBPos = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(314, 15);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(314, 17);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
             this.btnSeleccionarArchivo.Size = new System.Drawing.Size(30, 23);
             this.btnSeleccionarArchivo.TabIndex = 9;
@@ -89,22 +89,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(332, 129);
             this.panel1.TabIndex = 7;
-            // 
-            // textCriterio
-            // 
-            this.textCriterio.Location = new System.Drawing.Point(3, 35);
-            this.textCriterio.Name = "textCriterio";
-            this.textCriterio.Size = new System.Drawing.Size(230, 20);
-            this.textCriterio.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Buscar por: ";
             // 
             // DTFechaPublicacion
             // 
@@ -145,15 +129,6 @@
             this.textTitulo.Name = "textTitulo";
             this.textTitulo.Size = new System.Drawing.Size(200, 20);
             this.textTitulo.TabIndex = 6;
-            // 
-            // btnLeer
-            // 
-            this.btnLeer.Location = new System.Drawing.Point(239, 33);
-            this.btnLeer.Name = "btnLeer";
-            this.btnLeer.Size = new System.Drawing.Size(81, 23);
-            this.btnLeer.TabIndex = 5;
-            this.btnLeer.Text = "Buscar";
-            this.btnLeer.UseVisualStyleBackColor = true;
             // 
             // labFechaPublicacion
             // 
@@ -200,17 +175,65 @@
             this.labTitulo.TabIndex = 0;
             this.labTitulo.Text = "Título: ";
             // 
+            // textCriterio
+            // 
+            this.textCriterio.Location = new System.Drawing.Point(3, 35);
+            this.textCriterio.Name = "textCriterio";
+            this.textCriterio.Size = new System.Drawing.Size(230, 20);
+            this.textCriterio.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Buscar por: ";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(239, 33);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(81, 23);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.rBPos);
             this.panel2.Controls.Add(this.rBIsbn);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.textCriterio);
-            this.panel2.Controls.Add(this.btnLeer);
+            this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Location = new System.Drawing.Point(13, 194);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(331, 66);
             this.panel2.TabIndex = 14;
+            // 
+            // rBPos
+            // 
+            this.rBPos.AutoSize = true;
+            this.rBPos.Checked = true;
+            this.rBPos.Location = new System.Drawing.Point(89, 12);
+            this.rBPos.Name = "rBPos";
+            this.rBPos.Size = new System.Drawing.Size(65, 17);
+            this.rBPos.TabIndex = 14;
+            this.rBPos.TabStop = true;
+            this.rBPos.Text = "Posición";
+            this.rBPos.UseVisualStyleBackColor = true;
+            // 
+            // rBIsbn
+            // 
+            this.rBIsbn.AutoSize = true;
+            this.rBIsbn.Location = new System.Drawing.Point(160, 12);
+            this.rBIsbn.Name = "rBIsbn";
+            this.rBIsbn.Size = new System.Drawing.Size(50, 17);
+            this.rBIsbn.TabIndex = 13;
+            this.rBIsbn.Text = "ISBN";
+            this.rBIsbn.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
@@ -236,34 +259,11 @@
             this.btnHabilitar.UseVisualStyleBackColor = true;
             this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
             // 
-            // rBIsbn
-            // 
-            this.rBIsbn.AutoSize = true;
-            this.rBIsbn.Checked = true;
-            this.rBIsbn.Location = new System.Drawing.Point(120, 13);
-            this.rBIsbn.Name = "rBIsbn";
-            this.rBIsbn.Size = new System.Drawing.Size(50, 17);
-            this.rBIsbn.TabIndex = 13;
-            this.rBIsbn.TabStop = true;
-            this.rBIsbn.Text = "ISBN";
-            this.rBIsbn.UseVisualStyleBackColor = true;
-            // 
-            // rBPos
-            // 
-            this.rBPos.AutoSize = true;
-            this.rBPos.Location = new System.Drawing.Point(192, 12);
-            this.rBPos.Name = "rBPos";
-            this.rBPos.Size = new System.Drawing.Size(65, 17);
-            this.rBPos.TabIndex = 14;
-            this.rBPos.TabStop = true;
-            this.rBPos.Text = "Posición";
-            this.rBPos.UseVisualStyleBackColor = true;
-            // 
             // GUIActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 306);
+            this.ClientSize = new System.Drawing.Size(358, 306);
             this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.panel2);
@@ -271,7 +271,8 @@
             this.Controls.Add(this.txtRutaArchivo);
             this.Controls.Add(this.panel1);
             this.Name = "GUIActualizar";
-            this.Text = "GUIActualizar";
+            this.Text = "Actualizar";
+            this.Load += new System.EventHandler(this.GUIActualizar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -298,7 +299,7 @@
         private System.Windows.Forms.Label labTitulo;
         private System.Windows.Forms.TextBox textCriterio;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLeer;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnActualizar;

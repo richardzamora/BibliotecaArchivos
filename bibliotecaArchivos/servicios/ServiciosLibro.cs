@@ -11,6 +11,7 @@ namespace bibliotecaArchivos.servicios
     class ServiciosLibro
     {
         public const int NUM_BYTES = 173;
+        public const int BYTES_LONG = 8;
         /*
          * Casos de uso
          */
@@ -18,7 +19,8 @@ namespace bibliotecaArchivos.servicios
         //Grabar registro en el archivo         ---> Full
         //Actualizar registro en el archivo     ---> 
         //Eliminar registro del archivo         ---> Full
-        //Volcar datos al archivo               ---> 
+        //Volcar datos al archivo               ---> Funciona
+        //Listar Registro                       --->
 
         public static void grabarLibro(Libro nuevoLibro, String ruta)
         {
@@ -59,7 +61,6 @@ namespace bibliotecaArchivos.servicios
             }
             else
             {
-
                 binaryReader.BaseStream.Position = pos * NUM_BYTES;
                 char estado = 'P';
                 while (estado != 'A')
@@ -70,6 +71,7 @@ namespace bibliotecaArchivos.servicios
                         archivo.Close();
                         throw new Exception("La posición indicada supera el máximo de libros existentes");
                     }
+
                     estado = binaryReader.ReadChar();
                     pTitulo = binaryReader.ReadString();
                     pAutor = binaryReader.ReadString();
@@ -77,13 +79,14 @@ namespace bibliotecaArchivos.servicios
                     pNumPag = binaryReader.ReadInt32();
                     long binDate = binaryReader.ReadInt64();
                     pFecha = DateTime.FromBinary(binDate);
-
                 }
             }
+
             Libro nuevo = new Libro(pTitulo, pAutor, pIsbn, pNumPag, pFecha);
 
             binaryReader.Close();
             archivo.Close();
+
             return nuevo;
         }
 
@@ -180,6 +183,128 @@ namespace bibliotecaArchivos.servicios
 
             sr.Close();
             archivo.Close();
+        }
+
+        public static Libro buscarLibroISBN(String ruta, long isbn)
+        {
+            FileStream archivo;
+            BinaryReader binaryReader;
+
+            archivo = new FileStream(ruta, FileMode.Open);
+            binaryReader = new BinaryReader(archivo, Encoding.UTF8);
+
+            char estado = ' ';
+            string pTitulo = null;
+            string pAutor = null;
+            long pIsbn = 0;
+            int pNumPag = 0;
+            DateTime pFecha = default(DateTime);
+            if (binaryReader.BaseStream.Length == 0)
+            {
+                binaryReader.Close();
+                archivo.Close();
+                throw new Exception("El documento está vacio");
+            }
+            estado = binaryReader.ReadChar();
+            pTitulo = binaryReader.ReadString();
+            pAutor = binaryReader.ReadString();
+            pIsbn = binaryReader.ReadInt64();
+
+            while (pIsbn != isbn)
+                {
+                    if ((binaryReader.BaseStream.Position + NUM_BYTES) > binaryReader.BaseStream.Length)
+                    {
+                        binaryReader.Close();
+                        archivo.Close();
+                        throw new Exception("El libro con el criterio a buscar no existe");
+                    }
+                    else
+                    {
+                        binaryReader.BaseStream.Position = binaryReader.BaseStream.Position + (NUM_BYTES-BYTES_LONG);
+                        pIsbn = binaryReader.ReadInt64();
+                    }
+                }
+            binaryReader.BaseStream.Position = binaryReader.BaseStream.Position - (161);
+
+            estado = binaryReader.ReadChar();
+            if (estado != 'A')
+            {
+                binaryReader.Close();
+                archivo.Close();
+                throw new Exception("El libro con el criterio a buscar fue eliminado");
+            }
+            pTitulo = binaryReader.ReadString();
+            pAutor = binaryReader.ReadString();
+            pIsbn = binaryReader.ReadInt64();
+            pNumPag = binaryReader.ReadInt32();
+            long binDate = binaryReader.ReadInt64();
+            pFecha = DateTime.FromBinary(binDate);
+
+            Libro buscado = new Libro(pTitulo, pAutor, pIsbn, pNumPag, pFecha);
+
+            binaryReader.Close();
+            archivo.Close();
+
+            return buscado;
+        }
+
+        public static void actualizarLibro(long isbn, String ruta, Libro actualizado)
+        {
+            FileStream archivo;
+            BinaryReader binaryReader;
+            BinaryWriter bw;
+
+            archivo = new FileStream(ruta, FileMode.Open);
+            binaryReader = new BinaryReader(archivo, Encoding.UTF8);
+            bw = new BinaryWriter(archivo, Encoding.UTF8);
+
+            char estado = ' ';
+            string pTitulo = null;
+            string pAutor = null;
+            long pIsbn = 0;
+            if (binaryReader.BaseStream.Length == 0)
+            {
+                binaryReader.Close();
+                archivo.Close();
+                throw new Exception("El documento está vacio");
+            }
+            estado = binaryReader.ReadChar();
+            pTitulo = binaryReader.ReadString();
+            pAutor = binaryReader.ReadString();
+            pIsbn = binaryReader.ReadInt64();
+
+            while (pIsbn != isbn)
+            {
+                if ((binaryReader.BaseStream.Position + NUM_BYTES) > binaryReader.BaseStream.Length)
+                {
+                    binaryReader.Close();
+                    archivo.Close();
+                    throw new Exception("El libro con el criterio a buscar no existe");
+                }
+                else
+                {
+                    binaryReader.BaseStream.Position = binaryReader.BaseStream.Position + (NUM_BYTES - BYTES_LONG);
+                    pIsbn = binaryReader.ReadInt64();
+                }
+            }
+            binaryReader.BaseStream.Position = binaryReader.BaseStream.Position - (161);
+
+            estado = binaryReader.ReadChar();
+            if (estado != 'A')
+            {
+                binaryReader.Close();
+                archivo.Close();
+                throw new Exception("El libro con el criterio a buscar fue eliminado");
+            }
+            bw.Write(actualizado.getTitulo());
+            bw.Write(actualizado.getAutor());
+            bw.Write(actualizado.getIsbn());
+            bw.Write(actualizado.getNumPaginas());
+            bw.Write(actualizado.getFechaPublicacion().ToBinary());
+
+            binaryReader.Close();
+            archivo.Close();
+
         }
     }
 }

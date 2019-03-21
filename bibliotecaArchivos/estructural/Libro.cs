@@ -18,7 +18,8 @@ namespace bibliotecaArchivos.estructural
         
         
         public Libro (String pTitulo, String pAutor,  long pIsbn, int pNumPag, DateTime pFecha)
-        {   
+        {
+            estado = 'A';
             if (pTitulo.Length>100)
             {
                 titulo = pTitulo.Substring(0, 100);
@@ -35,15 +36,15 @@ namespace bibliotecaArchivos.estructural
             {
                 autor = String.Format("{0,-50}", pAutor);
             }
-          //          titulo = String.Format("{0,-100}", pTitulo);
+            //titulo = String.Format("{0,-100}", pTitulo);
+            //autor = String.Format("{0,-50}", pAutor);
+            //titulo = pTitulo;
+            //autor = pAutor;
 
-          //          autor = String.Format("{0,-50}", pAutor);
-          //  titulo = pTitulo;
-          //  autor = pAutor;
-            numPaginas = pNumPag;
             isbn = pIsbn;
+            numPaginas = pNumPag;
             fechaPublicacion = pFecha;
-            estado = 'A';
+            
         }
 
         public String getTitulo()
@@ -94,6 +95,5 @@ namespace bibliotecaArchivos.estructural
         {
             this.estado = estado;
         }
-
     }
 }

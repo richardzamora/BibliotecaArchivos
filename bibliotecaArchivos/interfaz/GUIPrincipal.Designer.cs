@@ -52,7 +52,11 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+<<<<<<< HEAD
             this.menuStrip1.Size = new System.Drawing.Size(299, 24);
+=======
+            this.menuStrip1.Size = new System.Drawing.Size(292, 24);
+>>>>>>> b72794e7d8a157ea7db09dc5bca53f474f7b5428
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -130,7 +134,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(82, 159);
+=======
+            this.label1.Location = new System.Drawing.Point(75, 150);
+>>>>>>> b72794e7d8a157ea7db09dc5bca53f474f7b5428
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 31);
             this.label1.TabIndex = 4;
@@ -139,7 +147,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+<<<<<<< HEAD
             this.pictureBox1.Location = new System.Drawing.Point(19, 45);
+=======
+            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
+>>>>>>> b72794e7d8a157ea7db09dc5bca53f474f7b5428
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(260, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,7 +162,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(299, 217);
+=======
+            this.ClientSize = new System.Drawing.Size(292, 194);
+>>>>>>> b72794e7d8a157ea7db09dc5bca53f474f7b5428
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);

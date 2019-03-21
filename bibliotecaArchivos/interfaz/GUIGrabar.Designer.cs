@@ -187,6 +187,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "GUIGrabar";
             this.Text = "Grabar Libro";
+            this.Load += new System.EventHandler(this.GUIGrabar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

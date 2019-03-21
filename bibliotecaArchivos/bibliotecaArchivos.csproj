@@ -72,6 +72,12 @@
     <Compile Include="interfaz\GUILeer.Designer.cs">
       <DependentUpon>GUILeer.cs</DependentUpon>
     </Compile>
+    <Compile Include="interfaz\GUIListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz\GUIListar.Designer.cs">
+      <DependentUpon>GUIListar.cs</DependentUpon>
+    </Compile>
     <Compile Include="interfaz\GUIMostrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="interfaz\GUILeer.resx">
       <DependentUpon>GUILeer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz\GUIListar.resx">
+      <DependentUpon>GUIListar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="interfaz\GUIPrincipal.resx">
       <DependentUpon>GUIPrincipal.cs</DependentUpon>

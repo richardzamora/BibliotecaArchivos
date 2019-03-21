@@ -17,7 +17,7 @@ namespace bibliotecaArchivos.servicios
          */
         //Leer registro del archivo             ---> Full
         //Grabar registro en el archivo         ---> Full
-        //Actualizar registro en el archivo     ---> 
+        //Actualizar registro en el archivo     ---> Full
         //Eliminar registro del archivo         ---> Full
         //Volcar datos al archivo               ---> Funciona
         //Listar Registro                       --->

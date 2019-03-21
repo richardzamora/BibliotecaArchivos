@@ -50,6 +50,7 @@ namespace bibliotecaArchivos.interfaz
             try
             {
                 servicios.ServiciosLibro.volcarArchivos(txtRutaArchivoOrigen.Text, txtRutaArchivoDestino.Text);
+                MessageBox.Show("Datos volcados exitosamente.");
             }
             catch (Exception ex)
             {

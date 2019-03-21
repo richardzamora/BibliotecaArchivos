@@ -118,5 +118,10 @@ namespace bibliotecaArchivos.interfaz
             txtRutaArchivo.Text = openFileDialog1.FileName;
 
         }
+
+        private void GUIGrabar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

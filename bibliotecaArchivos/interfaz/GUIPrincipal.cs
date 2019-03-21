@@ -57,5 +57,16 @@ namespace bibliotecaArchivos
             GUIActualizar gui = new GUIActualizar();
             gui.Show();
         }
+
+        private void listarLibosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUIListar gui = new GUIListar();
+            gui.Show();
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
